@@ -1,0 +1,207 @@
+// button
+@mixin nawabBtnOne {
+    border: none;
+    color: $primamryColorWhite;
+    border-radius: 4px;
+    transition: ease-in-out 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    background: linear-gradient(184.96deg, #489cff 1.19%, #0075ff 101.54%);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+        box-shadow: 0px 3px 20px rgba(31, 141, 237, 0.3);
+    }
+}
+
+@mixin nawabBtnTwo {
+    border: none;
+    color: $primamryColorWhite;
+    border-radius: 4px;
+    transition: ease-in-out 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid $primamryColorWhite;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    &:hover {
+        color: black;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+
+    &:before {
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: $primamryColorWhite;
+    }
+
+    &:hover::before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+    }
+}
+
+@mixin nawabBtnThree {
+    border: none;
+    color: #0075FF;
+    border-radius: 4px;
+    transition: ease-in-out 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    border: 2px Solid rgba(0, 117, 255, 0.1);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    &:hover {
+        color: $primamryColorWhite;
+        cursor: pointer;
+        border: none;
+        padding: 9px 23px;
+    }
+
+    &:before {
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background: linear-gradient(184.96deg, #489cff 1.19%, #0075ff 101.54%);
+        border-radius: 4px;
+    }
+
+    &:hover::before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+    }
+}
+
+// hero
+@mixin heroTitle {
+    font-size: 68px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 82px;
+    margin: 0;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 50px;
+        letter-spacing: 1px;
+        line-height: 65px;
+        margin-top: 0;
+    }
+}
+
+@mixin heroDescription {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 22px;
+    }
+}
+
+// Section 
+@mixin nawabSectionTitle {
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 800;
+    color: $primamryColorBlue;
+    text-align: center;
+    font-style: normal;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@mixin nawabSectionDescription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $primamryColorParagraph;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Domain Search
+@mixin cardBody {
+    padding: 0 10px 5px 10px;
+    background: $primamryColorWhite;
+    box-shadow: 0px 1px 3px rgba(44, 45, 61, 0.16);
+    border-radius: 4px;
+    margin: 5px 5px;
+    text-align: center;
+}
+
+@mixin cardHead {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin cardParagraph {
+    font-weight: 400;
+    font-size: 13px;
+    color: $primamryColorParagraph;
+    padding: 0;
+    margin: 0;
+
+    span {
+        font-size: 10px;
+    }
+}
+
+// Service 
+@mixin serviceHeading {
+    font-size: 22px;
+    font-weight: 700;
+    color: $primamryColorBlue;
+    margin: 0;
+}
+
+@mixin serviceDescription {
+    font-size: 16px;
+    font-weight: 400;
+    color: $primamryColorParagraph;
+    margin: 0;
+}
+
+@mixin serviceLink {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primamryColorBlue;
+    margin: 0;
+}
